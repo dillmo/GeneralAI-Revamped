@@ -13,6 +13,10 @@ determine each bot's playstyle independently of what 'Naut they play as. For
 instance, instead of saying that Clunk and Derpl should tower dive to initiate,
 GeneralAI-Revamped should dictate that nukers tower dive to initiate.
 
+Ideally, this project will take advantage of logic already in the [BotCollab
+Toolkit](https://github.com/dillmo/Bot-Collab-Toolkits), which has put a lot of
+work towards allowing bots to communicate with each other.
+
 If any other contributors have ideas for improving this, please don't hesitate
 to add them to this README.
 
