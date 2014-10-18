@@ -1,0 +1,369 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Vampire</string>
+                    <string id="Comment">Ayla</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isFighter</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isDamageDealer</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Tank</string>
+                    <string id="Comment">Clunk</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isTank</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isCrowdControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isNuker</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Blazer</string>
+                    <string id="Comment">Coco</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isFighter</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isAreaControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isHarasser</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Heavy</string>
+                    <string id="Comment">Derpl</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isTank</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isAreaControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isNuker</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Dasher</string>
+                    <string id="Comment">Froggy G</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isAssassin</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isInitiator</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isNuker</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Butterfly</string>
+                    <string id="Comment">Genji</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isSupport</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isInitiator</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isCrowdControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Maw</string>
+                    <string id="Comment">Gmaw</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isHarasser</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isAreaControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isDamageDealer</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Chameleon</string>
+                    <string id="Comment">Leon</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isAssassin</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isInitiator</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isDamageDealer</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Cowboy</string>
+                    <string id="Comment">Lonestar</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isFighter</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isPusher</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Assassin</string>
+                    <string id="Comment">Penny Fox</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isAssassin</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isHarasser</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isPusher</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Hunter</string>
+                    <string id="Comment">Raelynn</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isHarasser</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isPusher</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isAreaControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Paladin</string>
+                    <string id="Comment">Scoop</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isSupport</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isTank</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Spy</string>
+                    <string id="Comment">Sentry X-58</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isTank</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isCrowdControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isAreaControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Brute</string>
+                    <string id="Comment">Skolldir</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isFighter</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isInitiator</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isCrowdControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Shaman</string>
+                    <string id="Comment">Skree</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isAreaControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isHarasser</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isDamageDealer</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Captain</string>
+                    <string id="Comment">Swiggins</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isFighter</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isInitiator</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isCrowdControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Commando</string>
+                    <string id="Comment">Ted McPain</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isFighter</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isDamageDealer</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Bird</string>
+                    <string id="Comment">Vinnie &amp; Spike</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isAssassin</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isCrowdControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isNuker</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Summoner</string>
+                    <string id="Comment">Voltar</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isSupport</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isPusher</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+                <condition id="checkClass">
+                    <string id="check on" values="targetself">self</string>
+                    <string id="class">Jetter</string>
+                    <string id="Comment">Yuri</string>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">isSupport</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isPusher</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isAreaControl</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>
