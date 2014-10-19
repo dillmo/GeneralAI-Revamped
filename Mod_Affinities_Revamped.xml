@@ -3,372 +3,1896 @@
     <behaviour>
         <root x="110" y="40">
             <normal>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Vampire</string>
+                    <string id="Comment">Reset values for class changes</string>
+                    <normal>
+                        <andblock>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAssassin</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFighter</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFlyer</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsHarasser</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsInitiator</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsNuker</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsPusher</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsSupport</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsTank</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                            </else>
+                            <or>
+                                <condition id="checkCounter">
+                                    <string id="id">bot1LastClass</string>
+                                    <string id="value">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                </condition>
+                                <condition id="checkCounter">
+                                    <string id="id">bot1LastClass</string>
+                                    <string id="value">0</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                </condition>
+                            </or>
+                        </andblock>
+                        <andblock>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAssassin</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFlyer</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsHarasser</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsInitiator</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsNuker</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsPusher</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsSupport</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsTank</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                            </else>
+                            <or>
+                                <condition id="checkCounter">
+                                    <string id="id">bot2LastClass</string>
+                                    <string id="value">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                </condition>
+                                <condition id="checkCounter">
+                                    <string id="id">bot2LastClass</string>
+                                    <string id="value">0</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                </condition>
+                            </or>
+                        </andblock>
+                        <andblock>
+                            <else>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAssassin</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFighter</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFlyer</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsHarasser</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsInitiator</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsNuker</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsPusher</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsSupport</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsTank</string>
+                                    <string id="value" values="flagtoggle">no</string>
+                                </action>
+                            </else>
+                            <or>
+                                <condition id="checkCounter">
+                                    <string id="id">bot3LastClass</string>
+                                    <string id="value">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                </condition>
+                                <condition id="checkCounter">
+                                    <string id="id">bot3LastClass</string>
+                                    <string id="value">0</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                </condition>
+                            </or>
+                        </andblock>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health</string>
+                            <float id="value">0.00</float>
+                            <string id="compare method" values="valuecompare">greater or equal</string>
+                            <string id="check on" values="targetself">self</string>
+                            <string id="Comment">Track bot classes over time</string>
+                            <normal>
+                                <action id="adjustCounter">
+                                    <string id="id">bot1LastClass</string>
+                                    <string id="value">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">bot2LastClass</string>
+                                    <string id="value">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                </action>
+                                <action id="adjustCounter">
+                                    <string id="id">bot3LastClass</string>
+                                    <string id="value">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                                    <string id="adjust method" values="valueadjust">set</string>
+                                </action>
+                            </normal>
+                        </condition>
+                    </normal>
+                </condition>
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
+                    <string id="check on" values="targetself">self</string>
                     <string id="Comment">Ayla</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isFighter</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isDamageDealer</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Vampire</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Vampire</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Vampire</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Vampire</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Tank</string>
                     <string id="Comment">Clunk</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isTank</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isCrowdControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isNuker</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Tank</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Tank</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Tank</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Tank</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Blazer</string>
                     <string id="Comment">Coco</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isFighter</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isAreaControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isHarasser</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Blazer</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Blazer</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Blazer</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Blazer</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Heavy</string>
                     <string id="Comment">Derpl</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isTank</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isAreaControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isNuker</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Heavy</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Heavy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_lugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Heavy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Heavy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Dasher</string>
                     <string id="Comment">Froggy G</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isAssassin</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isInitiator</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isNuker</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Dasher</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Dasher</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Dasher</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Dasher</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Butterfly</string>
                     <string id="Comment">Genji</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isSupport</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isInitiator</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isCrowdControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Butterfly</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Butterfly</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Butterfly</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Butterfly</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Maw</string>
-                    <string id="Comment">Gmaw</string>
+                    <string id="Comment">Gnaw</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isHarasser</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isAreaControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isDamageDealer</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Maw</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Maw</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Maw</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Maw</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Chameleon</string>
                     <string id="Comment">Leon</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isAssassin</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isInitiator</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isDamageDealer</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Chameleon</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Chameleon</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Chameleon</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Chameleon</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Cowboy</string>
                     <string id="Comment">Lonestar</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isFighter</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isPusher</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Cowboy</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Cowboy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Cowboy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Cowboy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Assassin</string>
                     <string id="Comment">Penny Fox</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isAssassin</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isHarasser</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isPusher</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Assassin</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Assassin</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Assassin</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Assassin</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Hunter</string>
                     <string id="Comment">Raelynn</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isHarasser</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isPusher</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isAreaControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Hunter</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Hunter</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Hunter</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Hunter</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Paladin</string>
                     <string id="Comment">Scoop</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isSupport</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isTank</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Paladin</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Paladin</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Paladin</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Paladin</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Spy</string>
                     <string id="Comment">Sentry X-58</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isTank</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isCrowdControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isAreaControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Spy</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Spy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Spy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Spy</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsTank</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Brute</string>
                     <string id="Comment">Skolldir</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isFighter</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isInitiator</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isCrowdControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Brute</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Brute</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Brute</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Brute</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Brute</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Shaman</string>
                     <string id="Comment">Skree</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isAreaControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isHarasser</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isDamageDealer</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Shaman</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Shaman</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Shaman</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Shaman</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsHarasser</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                    <string id="Minimized">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Captain</string>
                     <string id="Comment">Swiggins</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isFighter</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isInitiator</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isCrowdControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Captain</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Captain</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Captain</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Captain</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsInitiator</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Commando</string>
                     <string id="Comment">Ted McPain</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isFighter</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isDamageDealer</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Commando</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Commando</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Commando</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Commando</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFighter</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsDamageDealer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Bird</string>
                     <string id="Comment">Vinnie &amp; Spike</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isAssassin</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isFlyer</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isCrowdControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isNuker</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Bird</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Bird</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Bird</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Bird</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAssassin</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsCrowdControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsNuker</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Summoner</string>
                     <string id="Comment">Voltar</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isSupport</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isPusher</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Summoner</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Summoner</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Summoner</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Summoner</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
-                <condition id="checkClass">
+                <condition id="checkCharacterValue">
+                    <string id="property" values="charactervaluesCheckable">health</string>
+                    <float id="value">0.00</float>
+                    <string id="compare method" values="valuecompare">greater or equal</string>
                     <string id="check on" values="targetself">self</string>
-                    <string id="class">Jetter</string>
                     <string id="Comment">Yuri</string>
                     <normal>
-                        <action id="setBool">
-                            <string id="id">isSupport</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isFlyer</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isPusher</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
-                        <action id="setBool">
-                            <string id="id">isAreaControl</string>
-                            <string id="value" values="flagtoggle">yes</string>
-                        </action>
+                        <condition id="checkClass">
+                            <string id="check on" values="targetself">self</string>
+                            <string id="class">Jetter</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">isSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">isAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot1Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Jetter</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot1IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot1IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot2Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Jetter</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot2IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot2IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
+                        <condition id="checkCounter">
+                            <string id="id">Toolkit_BotCollab_Plugin_Class_Bot3Class</string>
+                            <string id="value">Toolkit_BotCollab_Plugin_Class_Jetter</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <action id="setBool">
+                                    <string id="id">bot3IsSupport</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsFlyer</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsPusher</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                                <action id="setBool">
+                                    <string id="id">bot3IsAreaControl</string>
+                                    <string id="value" values="flagtoggle">yes</string>
+                                </action>
+                            </normal>
+                        </condition>
                     </normal>
                 </condition>
             </normal>
