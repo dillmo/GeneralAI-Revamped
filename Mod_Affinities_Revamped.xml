@@ -320,6 +320,10 @@
                             <string id="value" values="flagtoggle">yes</string>
                         </action>
                         <action id="setBool">
+                            <string id="id">isFlyer</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
                             <string id="id">isCrowdControl</string>
                             <string id="value" values="flagtoggle">yes</string>
                         </action>
@@ -351,6 +355,10 @@
                     <normal>
                         <action id="setBool">
                             <string id="id">isSupport</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">isFlyer</string>
                             <string id="value" values="flagtoggle">yes</string>
                         </action>
                         <action id="setBool">
